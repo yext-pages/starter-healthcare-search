@@ -5,7 +5,7 @@ import { CardProps } from "@yext/search-ui-react";
 import { provideSearchAnalytics } from "@yext/analytics";
 import { experienceKey, experienceVersion, businessId } from "../../common/consts";
 import { useSearchState } from "@yext/search-headless-react";
-import Ce_financialProduct from "../../types/financial_products";
+import jobs from "../../types/jobs";
 
 export const searchAnalytics = provideSearchAnalytics({
   experienceKey: experienceKey,
@@ -13,22 +13,22 @@ export const searchAnalytics = provideSearchAnalytics({
   businessId: businessId
 })
 
-const ProductsCard = ({
+const JobsCard = ({
     result,
     //replace the interface FAQ with the typescript interface of your vertical
-  }: CardProps<Ce_financialProduct>) => {
+  }: CardProps<jobs>) => {
     //pull in the relevant fields from your entity to display on the card
     const data: any = {
         name: result.rawData.name,
         description: result.rawData.description,
-        landingPageUrl: result.rawData.landingPageUrl,
-        category: result.rawData.fins_productCategory,
-        cta1: result.rawData.fins_primaryCTA,
-        cta2: result.rawData.fins_secondaryCTA
+        // landingPageUrl: result.rawData.landingPageUrl,
+        // category: result.rawData.fins_productCategory,
+        // cta1: result.rawData.fins_primaryCTA,
+        // cta2: result.rawData.fins_secondaryCTA
     }
 
     //replace below with the appropriate vertical key
-    const verticalKey = 'fins_products'
+    const verticalKey = 'jobs'
 
     //analytics configuration for the card
     const queryId = useSearchState((state)=>state.query.queryId) || "";
@@ -91,4 +91,4 @@ const ProductsCard = ({
     )
 };
 
-export default ProductsCard;
+export default JobsCard;

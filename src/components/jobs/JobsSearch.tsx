@@ -14,7 +14,7 @@ import {
 import {
   useSearchState
   } from "@yext/search-headless-react";
-import ProductsCard from "./ProductsCard";
+import ProductsCard from "./JobsCard";
 
 const ProductsSearch = () => {
 

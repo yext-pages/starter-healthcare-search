@@ -13,7 +13,8 @@ import { UNIVERSAL_LIMITS } from "../../common/consts";
 import LocationCard from "../locations/LocationCard";
 import ProfessionalsCard from "../professionals/ProfessionalsCard";
 import ServicesCard from "../services/ServicesCard";
-import ProductsCard from "../products/ProductsCard";
+import ProductsCard from "../jobs/JobsCard";
+import JobsCard from "../jobs/JobsCard";
 
 const UniversalSearch = () => {
   const searchActions = useSearchActions();
@@ -36,22 +37,18 @@ const UniversalSearch = () => {
                       CardComponent: FaqCard
                   },
                 // uncomment below to add an additonal vertical configuration
-                  locations: {
-                    label: "Branches & ATMs",
+                  healthcare_facilities: {
+                    label: "Facilities",
                     CardComponent: LocationCard
                 },
-                financial_professionals: {
-                  label: "Financial Professionals",
+                healthcare_professionals: {
+                  label: "Professionals",
                   CardComponent: ProfessionalsCard
               },
-              financial_products: {
-                label: "Products",
-                CardComponent: ProductsCard
+              jobs: {
+                label: "Jobs",
+                CardComponent: JobsCard
             },
-            services: {
-              label: "Services",
-              CardComponent: ServicesCard
-          },
               }}/>
           {mostRecentSearch && universalResultsCount === 0 && (
             <div>

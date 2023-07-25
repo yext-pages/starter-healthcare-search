@@ -14,7 +14,7 @@ import VerticalNav from "./VerticalNav";
 import FaqSearch from "../faq/FaqSearch";
 import LocationSearch from "../locations/LocationSearch";
 import ProfessionalsSearch from "../professionals/ProfessionalsSearch";
-import ProductsSearch from "../products/ProductsSearch";
+import ProductsSearch from "../jobs/ProductsSearch";
 import ServicesSearch from "../services/ServicesSearch";
 
 const SearchExperience = () => {

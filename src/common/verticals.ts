@@ -21,22 +21,17 @@ export const verticals: Vertical[]= [
     },
     {
         showInNav: true,
-        label: "Branches & ATMs",
-        key: "locations"
+        label: "Jobs",
+        key: "jobs"
       },
       {
         showInNav: true,
         label: "Financial Professionals",
-        key: "financial_professionals"
+        key: "healthcare_professionals"
       },
       {
         showInNav: true,
         label: "Financial Products",
-        key: "financial_products"
-      },
-      {
-        showInNav: true,
-        label: "Services",
-        key: "services"
-      },
+        key: "healthcare_facilities"
+      }
 ]
