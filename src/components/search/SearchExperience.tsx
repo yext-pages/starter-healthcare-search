@@ -12,10 +12,9 @@ import {
 import UniversalSearch from "./UniversalSearch";
 import VerticalNav from "./VerticalNav";
 import FaqSearch from "../faqs/FaqSearch";
-import LocationSearch from "../facilities/FacilitySearch";
-import ProfessionalsSearch from "../professionals/ProfessionalSearch";
-import ProductsSearch from "../jobs/JobSearch";
-import ServicesSearch from "../services/ServicesSearch";
+import FacilitySearch from "../facilities/FacilitySearch";
+import ProfessionalSearch from "../professionals/ProfessionalSearch";
+import JobSearch from "../jobs/JobSearch";
 
 const SearchExperience = () => {
   //retrieves the current vertical key
