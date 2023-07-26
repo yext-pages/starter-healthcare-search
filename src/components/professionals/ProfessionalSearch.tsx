@@ -15,9 +15,9 @@ import {
 import {
   useSearchState
   } from "@yext/search-headless-react";
-import ProfessionalsCard from "./ProfessionalCard";
+import ProfessionalCard from "./ProfessionalCard";
 
-const ProfessionalsSearch = () => {
+const ProfessionalSearch = () => {
 
     const mostRecentSearch = useSearchState(
         (state) => state.query.mostRecentSearch
@@ -83,7 +83,7 @@ const ProfessionalsSearch = () => {
               </p>
             </div>
           )}                      <VerticalResults
-                        CardComponent={ProfessionalsCard}
+                        CardComponent={ProfessionalCard}
                         displayAllOnNoResults={true}
                         customCssClasses={{
                           verticalResultsContainer: "w-full"
@@ -103,4 +103,4 @@ const ProfessionalsSearch = () => {
             </div>
         )}
 
-export default ProfessionalsSearch;
+export default ProfessionalSearch;

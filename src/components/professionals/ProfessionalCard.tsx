@@ -6,7 +6,7 @@ import { CardProps } from "@yext/search-ui-react";
 import { provideSearchAnalytics } from "@yext/analytics";
 import { experienceKey, experienceVersion, businessId } from "../../common/consts";
 import { useSearchState } from "@yext/search-headless-react";
-import FinancialProfessional from "../../types/financial_professionals";
+import HealthcareProfessional from "../../types/professionals";
 
 export const searchAnalytics = provideSearchAnalytics({
   experienceKey: experienceKey,
@@ -14,29 +14,30 @@ export const searchAnalytics = provideSearchAnalytics({
   businessId: businessId
 })
 
-const ProfessionalsCard = ({
+const ProfessionalCard = ({
     result,
-  }: CardProps<FinancialProfessional>) => {
+  }: CardProps<HealthcareProfessional>) => {
     //pull in the relevant fields from your entity to display on the card
     const data: any = {
         name: result.rawData.name,
+        description: result.rawData.description,
         headshot: result.rawData.headshot,
-        landingPageUrl: result.rawData.landingPageUrl,
-        address: result.rawData.address,
-        mainPhone: result.rawData.mainPhone,
-        languages: result.rawData.languages,
-        interests: result.rawData.interests,
-        job: result.rawData.fins_jobTitle,
-        services: result.rawData.services,
-        email: result.rawData.emails,
-        cta1: result.rawData.fins_primaryCTA,
-        cta2: result.rawData.fins_secondaryCTA,
-        formattedPhone: `${result.rawData.mainPhone.substring(0, 2)} (${result.rawData.mainPhone.substring(2, 5)}) ${result.rawData.mainPhone.substring(5, 8)}-${result.rawData.mainPhone.substring(8)}`,
+        // landingPageUrl: result.rawData.landingPageUrl,
+        // address: result.rawData.address,
+        // mainPhone: result.rawData.mainPhone,
+        // languages: result.rawData.languages,
+        // interests: result.rawData.interests,
+        // job: result.rawData.fins_jobTitle,
+        // services: result.rawData.services,
+        // email: result.rawData.emails,
+        // cta1: result.rawData.fins_primaryCTA,
+        // cta2: result.rawData.fins_secondaryCTA,
+        // formattedPhone: `${result.rawData.mainPhone.substring(0, 2)} (${result.rawData.mainPhone.substring(2, 5)}) ${result.rawData.mainPhone.substring(5, 8)}-${result.rawData.mainPhone.substring(8)}`,
 
     }
 
     //replace below with the appropriate vertical key
-    const verticalKey = 'financial_professionals'
+    const verticalKey = 'healthcare_professionals'
 
     //analytics configuration for the card
     const queryId = useSearchState((state)=>state.query.queryId) || "";
@@ -70,7 +71,7 @@ const ProfessionalsCard = ({
             />
             <div className="ml-4 mr-10">
               <h1 className="text-2xl font-bold mb-2 text-blue-900" onClick ={() => fireTitle(result.id || "")}>{data.name}</h1>
-              <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.job}</h2>
+              <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.description}</h2>
               <div className="flex mb-1 justify-between space-x-10">
                 <p className="min-w-fit">{data.address.line1}</p>
                 <p className="ml-auto">{data.formattedPhone}</p>
@@ -100,5 +101,5 @@ const ProfessionalsCard = ({
 );
 }    
 
-    export default ProfessionalsCard;
+    export default ProfessionalCard;
 

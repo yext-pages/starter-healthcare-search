@@ -34,7 +34,7 @@ const FaqCard = ({
     }
 
 // change to the field name that contains html string
-    const htmlFieldName = 'answer';
+    const htmlFieldName = 'answerV2';
 
       
       function renderHTMLContent(htmlContent: { __html: string } | undefined) {
@@ -79,9 +79,9 @@ const FaqCard = ({
     return (
         <div className="mb-4 justify-between rounded-lg border p-4 text-stone-900 shadow-sm">
           <div className="body flex flex-col">
-            {data.name && (
+            {data.question && (
               <div className="title text-lg font-semibold text-blue-700 relative">
-                {data.name}
+                {data.question}
                 <button
                   onClick={handleToggle}
                   className="arrow absolute top-1/2 right-4 transform -translate-y-1/2 focus:outline-none"

@@ -4,7 +4,7 @@ import { provideSearchAnalytics } from "@yext/analytics";
 import { experienceKey, experienceVersion, businessId } from "../../common/consts";
 import * as React from "react";
 import { useSearchState } from "@yext/search-headless-react";
-import { Location } from "../../types/locations";
+import { Location } from "../../types/facilities";
 
 export const searchAnalytics = provideSearchAnalytics({
   experienceKey: experienceKey,
@@ -21,7 +21,7 @@ const LocationCard = ({
       landingPageUrl: result.rawData.landingPageUrl,
       address: result.rawData.address,
       mainPhone: result.rawData.mainPhone,
-      services: result.rawData.services,
+      // services: result.rawData.services,
       email: result.rawData.emails,
       cta1: result.rawData.fins_primaryCTA,
       cta2: result.rawData.fins_secondaryCTA,
