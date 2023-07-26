@@ -4,7 +4,7 @@ import * as React from "react";
 import { useMemo, useState } from "react";
 import { CardProps } from "@yext/search-ui-react";
 import { provideSearchAnalytics } from "@yext/analytics";
-
+import '../../styles/resetStyles.css'
 //replace with the vertical typescript interface this custom card applies to
 import FAQ from "../../types/faqs";
 

@@ -22,8 +22,10 @@ const ProfessionalCard = ({
         name: result.rawData.name,
         description: result.rawData.description,
         headshot: result.rawData.headshot,
+        certifications: result.rawData.certifications,
         // landingPageUrl: result.rawData.landingPageUrl,
-        // address: result.rawData.address,
+        address: result.rawData.address.city,
+        addressline1: result.rawData.address.line1
         // mainPhone: result.rawData.mainPhone,
         // languages: result.rawData.languages,
         // interests: result.rawData.interests,
@@ -71,14 +73,15 @@ const ProfessionalCard = ({
             />
             <div className="ml-4 mr-10">
               <h1 className="text-2xl font-bold mb-2 text-blue-900" onClick ={() => fireTitle(result.id || "")}>{data.name}</h1>
+              {/* <h3 className="text-sm font-semibold mb-2 text-blue-900">{data.certifications}</h3> */}
               <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.description}</h2>
               <div className="flex mb-1 justify-between space-x-10">
-                <p className="min-w-fit">{data.address.line1}</p>
-                <p className="ml-auto">{data.formattedPhone}</p>
+                {/* <p className="min-w-fit">{data.addressline1}</p> */}
+                {/* <p className="ml-auto">{data.address}</p> */}
               </div>
               <div className="flex mb-1 justify-between space-x-10">
-                <p className="min-w-fit">{`${data.address.city}, ${data.address.region} ${data.address.postalCode}`}</p>
-                <p className="ml-auto">{data.email}</p>
+                {/* <p className="min-w-fit">{`${data.address.city}, ${data.address.region} ${data.address.postalCode}`}</p>
+                <p className="ml-auto">{data.email}</p> */}
               </div>
             </div>
             <div className="cta-container flex flex-col ml-auto py-2 space-y-2 place-content-center">

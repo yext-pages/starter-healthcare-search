@@ -21,10 +21,10 @@ const JobCard = ({
     const data: any = {
         name: result.rawData.name,
         description: result.rawData.description,
-        employmentType: result.rawData.employmentType
-        // landingPageUrl: result.rawData.landingPageUrl,
+        employmentType: result.rawData.employmentType,
+        landingPageUrl: result.rawData.landingPageUrl,
         // category: result.rawData.fins_productCategory,
-        // cta1: result.rawData.fins_primaryCTA,
+        cta1: result.rawData.c_primaryCTA
         // cta2: result.rawData.fins_secondaryCTA
     }
 
@@ -56,8 +56,8 @@ const JobCard = ({
     return (
         <div className="mb-4 justify-between rounded-lg border p-4 text-stone-900 shadow-sm">
             <div className="body flex flex-col">
-                {data.landingPageUrl && (
-                    <a href={`${data.landingPageUrl}`} target = "_blank" rel="noreferrer">
+                {data.name && (
+                    <a href={`${data.name}`} target = "_blank" rel="noreferrer">
                         <div className="title text-lg font-semibold text-blue-700 hover:underline" onClick ={() => fireTitle(result.id || "")}>
                             {data.name}
                         </div>

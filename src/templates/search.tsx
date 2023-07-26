@@ -28,7 +28,7 @@ export const getHeadConfig: GetHeadConfig<
 > = (): HeadConfig => {
   return {
     //Update title to match Search starter
-    title: `Basic Search`,
+    title: `Healthcare Search`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
   };
