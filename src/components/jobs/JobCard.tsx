@@ -13,7 +13,7 @@ export const searchAnalytics = provideSearchAnalytics({
   businessId: businessId
 })
 
-const JobsCard = ({
+const JobCard = ({
     result,
     //replace the interface FAQ with the typescript interface of your vertical
   }: CardProps<jobs>) => {
@@ -21,6 +21,7 @@ const JobsCard = ({
     const data: any = {
         name: result.rawData.name,
         description: result.rawData.description,
+        employmentType: result.rawData.employmentType
         // landingPageUrl: result.rawData.landingPageUrl,
         // category: result.rawData.fins_productCategory,
         // cta1: result.rawData.fins_primaryCTA,
@@ -91,4 +92,4 @@ const JobsCard = ({
     )
 };
 
-export default JobsCard;
+export default JobCard;

@@ -14,9 +14,9 @@ import {
 import {
   useSearchState
   } from "@yext/search-headless-react";
-import ProductsCard from "./JobCard";
+import JobCard from "./JobCard";
 
-const ProductsSearch = () => {
+const JobSearch = () => {
 
     const mostRecentSearch = useSearchState(
         (state) => state.query.mostRecentSearch
@@ -36,7 +36,7 @@ const ProductsSearch = () => {
               }}>
               <StandardFacet
                     collapsible={false} 
-                    fieldId={"fins_productCategory"}               
+                    fieldId={"employmentType"}               
                     
               />
               </Facets>
@@ -64,12 +64,12 @@ const ProductsSearch = () => {
               <p>
                 The search
                 <span className="mx-1 font-semibold">{mostRecentSearch}</span>
-                did not match any Products.
+                did not match any Jobs.
               </p>
             </div>
           )}              
           <VerticalResults
-                CardComponent={ProductsCard}
+                CardComponent={JobCard}
                 displayAllOnNoResults={true}
                 customCssClasses={{
                   verticalResultsContainer: "w-full"
@@ -89,4 +89,4 @@ const ProductsSearch = () => {
       </div>
     )}
 
-export default ProductsSearch;
+export default JobSearch;

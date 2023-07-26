@@ -38,7 +38,7 @@ const ProfessionalsSearch = () => {
               <StandardFacet
                     collapsible={false} 
                     fieldId={"languages"}      
-                    label="Langes Spoken"         
+                    label="Languages Spoken"         
               />
               <StandardFacet
                     collapsible={false} 
@@ -79,7 +79,7 @@ const ProfessionalsSearch = () => {
               <p>
                 The search
                 <span className="mx-1 font-semibold">{mostRecentSearch}</span>
-                did not match any Adivsors.
+                did not match any Professionals.
               </p>
             </div>
           )}                      <VerticalResults

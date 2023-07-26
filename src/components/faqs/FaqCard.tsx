@@ -25,16 +25,16 @@ const FaqCard = ({
   }: CardProps<FAQ>) => {
     //pull in the relevant fields from your entity to display on the card
     const data: any = {
-        name: result.rawData.question,
-        answer: result.rawData.c_answerTest,
-        landingPageUrl: result.rawData.landingPageUrl,
-        category: result.rawData.fins_faqCategory,
-        cta1: result.rawData.fins_primaryCTA,
-        cta2: result.rawData.fins_secondaryCTA
+        question: result.rawData.question,
+        answer: result.rawData.answer
+        // landingPageUrl: result.rawData.landingPageUrl,
+        // category: result.rawData.fins_faqCategory,
+        // cta1: result.rawData.fins_primaryCTA,
+        // cta2: result.rawData.fins_secondaryCTA
     }
 
 // change to the field name that contains html string
-    const htmlFieldName = 'c_answerTest';
+    const htmlFieldName = 'answer';
 
       
       function renderHTMLContent(htmlContent: { __html: string } | undefined) {

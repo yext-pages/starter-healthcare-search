@@ -71,7 +71,7 @@ const resultsCount =
     <p>
       The search
       <span className="mx-1 font-semibold">{mostRecentSearch}</span>
-      did not match any Locations.
+      did not match any Facilities.
     </p>
   </div>
 )}      

@@ -22,16 +22,19 @@ export const verticals: Vertical[]= [
     {
         showInNav: true,
         label: "Jobs",
-        key: "jobs"
+        key: "jobs",
+        entityType: "job"
       },
       {
         showInNav: true,
         label: "Healthcare Professionals",
-        key: "healthcare_professionals"
+        key: "healthcare_professionals",
+        entityType: "healthcareProfessional"
       },
       {
         showInNav: true,
         label: "Healthcare Facilities",
-        key: "healthcare_facilities"
+        key: "healthcare_facilities",
+        entityType: "healthcareFacility"
       }
 ]
