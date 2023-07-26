@@ -15,7 +15,7 @@ import {
 // Mapbox CSS bundle
 import "mapbox-gl/dist/mapbox-gl.css";
 import * as React from "react";
-import LocationCard from "./LocationCard";
+import LocationCard from "./FacilityCard";
 
 const LocationSearch = () => {
   

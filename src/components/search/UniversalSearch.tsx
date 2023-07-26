@@ -7,14 +7,12 @@ import {
   StandardCard
   } from "@yext/search-ui-react";
 
-import FaqCard from "../faq/FaqCard";
 import { useSearchActions, useSearchState} from "@yext/search-headless-react";
 import { UNIVERSAL_LIMITS } from "../../common/consts";
-import LocationCard from "../locations/LocationCard";
-import ProfessionalsCard from "../professionals/ProfessionalsCard";
-import ServicesCard from "../services/ServicesCard";
-import ProductsCard from "../jobs/JobsCard";
-import JobsCard from "../jobs/JobsCard";
+import FaqCard from "../faqs/FaqCard";
+import ProfessionalCard from "../professionals/ProfessionalCard";
+import FacilityCard from "../facilities/FacilityCard";
+import JobCard from "../jobs/JobCard";
 
 const UniversalSearch = () => {
   const searchActions = useSearchActions();
@@ -36,18 +34,17 @@ const UniversalSearch = () => {
                       label: "FAQs",
                       CardComponent: FaqCard
                   },
-                // uncomment below to add an additonal vertical configuration
+                  healthcare_professionals: {
+                    label: "Professionals",
+                    CardComponent: ProfessionalCard
+                },
                   healthcare_facilities: {
                     label: "Facilities",
-                    CardComponent: LocationCard
+                    CardComponent: FacilityCard
                 },
-                healthcare_professionals: {
-                  label: "Professionals",
-                  CardComponent: ProfessionalsCard
-              },
               jobs: {
                 label: "Jobs",
-                CardComponent: JobsCard
+                CardComponent: JobCard
             },
               }}/>
           {mostRecentSearch && universalResultsCount === 0 && (

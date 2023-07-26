@@ -11,10 +11,10 @@ import {
 
 import UniversalSearch from "./UniversalSearch";
 import VerticalNav from "./VerticalNav";
-import FaqSearch from "../faq/FaqSearch";
-import LocationSearch from "../locations/LocationSearch";
-import ProfessionalsSearch from "../professionals/ProfessionalsSearch";
-import ProductsSearch from "../jobs/ProductsSearch";
+import FaqSearch from "../faqs/FaqSearch";
+import LocationSearch from "../facilities/FacilitySearch";
+import ProfessionalsSearch from "../professionals/ProfessionalSearch";
+import ProductsSearch from "../jobs/JobSearch";
 import ServicesSearch from "../services/ServicesSearch";
 
 const SearchExperience = () => {
@@ -28,10 +28,9 @@ const SearchExperience = () => {
           <VerticalNav />
           {currentVertical === "faqs" ? (<FaqSearch/>) :
           //comment out below to add a new vertical
-           currentVertical === "locations" ? (<LocationSearch/>) :
-           currentVertical === "financial_professionals" ? (<ProfessionalsSearch/>) :
-           currentVertical === "financial_products" ? (<ProductsSearch/>) :
-           currentVertical === "services" ? (<ServicesSearch/>) :
+           currentVertical === "healthcare_facilities" ? (<FacilitySearch/>) :
+           currentVertical === "healthcare_professionals" ? (<ProfessionalSearch/>) :
+           currentVertical === "jobs" ? (<JobSearch/>) :
            (<UniversalSearch />)}
         </div>
       </div>

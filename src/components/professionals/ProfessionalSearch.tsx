@@ -15,7 +15,7 @@ import {
 import {
   useSearchState
   } from "@yext/search-headless-react";
-import ProfessionalsCard from "./ProfessionalsCard";
+import ProfessionalsCard from "./ProfessionalCard";
 
 const ProfessionalsSearch = () => {
 

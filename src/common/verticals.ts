@@ -26,12 +26,12 @@ export const verticals: Vertical[]= [
       },
       {
         showInNav: true,
-        label: "Financial Professionals",
+        label: "Healthcare Professionals",
         key: "healthcare_professionals"
       },
       {
         showInNav: true,
-        label: "Financial Products",
+        label: "Healthcare Facilities",
         key: "healthcare_facilities"
       }
 ]
