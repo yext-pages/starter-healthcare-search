@@ -1,10 +1,10 @@
-// src/components/LocationCard.tsx
+// src/components/FacilityCard.tsx
 import { CardProps } from "@yext/search-ui-react";
 import { provideSearchAnalytics } from "@yext/analytics";
 import { experienceKey, experienceVersion, businessId } from "../../common/consts";
 import * as React from "react";
 import { useSearchState } from "@yext/search-headless-react";
-import { Location } from "../../types/facilities";
+import { Facility } from "../../types/facilities";
 
 export const searchAnalytics = provideSearchAnalytics({
   experienceKey: experienceKey,
@@ -12,9 +12,9 @@ export const searchAnalytics = provideSearchAnalytics({
   businessId: businessId
 })
 
-const LocationCard = ({
+const FacilityCard = ({
   result,
-}: CardProps<Location>) => {
+}: CardProps<Facility>) => {
   //pull in the relevant fields from your entity to display on the card
   const data: any = {
       name: result.rawData.name,
@@ -30,7 +30,7 @@ const LocationCard = ({
   }
 
     //replace below with the appropriate vertical key
-    const verticalKey = 'locations'
+    const verticalKey = 'healthcare_facilities'
     //analytics configuration for the card
     const queryId = useSearchState((state)=>state.query.queryId) || "";
     const fireClick = (id:string,label:string)=>{
@@ -62,14 +62,14 @@ const LocationCard = ({
         <div className="w-full bg-neutral-100 h-32 rounded-full flex flex-row">
             <div className="ml-4 mr-10">
               <h1 className="text-2xl font-bold mb-2 text-blue-900" onClick ={() => fireTitle(result.id || "")}>{data.name}</h1>
-              {/* <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.job}</h2> */}
+              <h2 className="text-lg font-semibold mb-2 text-blue-900">{data.description}</h2>
               {/* <div className="flex flex-col"> */}
               {/* <div className="flex mb-1 justify-between space-x-10"> */}
-                {/* <p className="min-w-fit">{data.address.line1}</p> */}
+                <p className="min-w-fit">{data.address.line1}</p>
                 {/* <p className="ml-auto">{data.formattedPhone}</p> */}
               {/* </div> */}
               <div className="flex mb-1 justify-between space-x-10">
-                {/* <p className="min-w-fit">{`${data.address.city}, ${data.address.region} ${data.address.postalCode}`}</p> */}
+                <p className="min-w-fit">{`${data.address.city}, ${data.address.region} ${data.address.postalCode}`}</p>
                 {/* <p className="ml-auto">{data.email}</p> */}
               </div>
             {/* </div> */}
@@ -93,4 +93,4 @@ const LocationCard = ({
     </div>
 );
 }
-export default LocationCard;
+export default FacilityCard;

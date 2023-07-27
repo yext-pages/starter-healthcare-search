@@ -15,13 +15,13 @@ import {
 // Mapbox CSS bundle
 import "mapbox-gl/dist/mapbox-gl.css";
 import * as React from "react";
-import LocationCard from "./FacilityCard";
+import FacilityCard from "./FacilityCard";
 
-const LocationSearch = () => {
+const FacilitySearch = () => {
   
   const searchActions = useSearchActions();
   useEffect(() => {
-    searchActions.setVertical("locations");
+    searchActions.setVertical("healthcare_facilities");
     searchActions.executeVerticalQuery();
   }, [searchActions]);
 
@@ -44,7 +44,7 @@ const resultsCount =
     <StandardFacet
           collapsible={false} 
           fieldId={"builtin.entityType"}            
-          label="Location Type"   
+          label="Facility Type"   
     />
     </Facets>
         <div className='flex flex-col w-full items-center'>
@@ -81,7 +81,7 @@ const resultsCount =
         />
     
 <VerticalResults
-      CardComponent={LocationCard}
+      CardComponent={FacilityCard}
       displayAllOnNoResults={true}
       customCssClasses={{
         verticalResultsContainer: "w-full my-2"
@@ -102,4 +102,4 @@ const resultsCount =
 </div>
 )}
 
-export default LocationSearch;
+export default FacilitySearch;

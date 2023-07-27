@@ -26,7 +26,8 @@ const FaqCard = ({
     //pull in the relevant fields from your entity to display on the card
     const data: any = {
         question: result.rawData.question,
-        answer: result.rawData.answer
+        answer: result.rawData.answer,
+        description: result.rawData.hc_description
         // landingPageUrl: result.rawData.landingPageUrl,
         // category: result.rawData.fins_faqCategory,
         // cta1: result.rawData.fins_primaryCTA,
@@ -44,7 +45,7 @@ const FaqCard = ({
         }
         return null;
       }
-      const html: string = result.rawData?.[htmlFieldName]?.html;
+      const html: string = data.description;
       const htmlContent = useMemo(() => { return { __html: html }; }, [html]);
 
     //analytics configuration for the card
