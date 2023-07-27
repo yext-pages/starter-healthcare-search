@@ -27,7 +27,7 @@ const FaqCard = ({
     const data: any = {
         question: result.rawData.question,
         answer: result.rawData.answer,
-        description: result.rawData.hc_description
+        description: result.rawData.hc_description,
         // landingPageUrl: result.rawData.landingPageUrl,
         // category: result.rawData.fins_faqCategory,
         // cta1: result.rawData.fins_primaryCTA,
@@ -45,7 +45,7 @@ const FaqCard = ({
         }
         return null;
       }
-      const html: string = data.description;
+      const html: string = result.rawData?.[htmlFieldName]?.html;
       const htmlContent = useMemo(() => { return { __html: html }; }, [html]);
 
     //analytics configuration for the card
@@ -123,7 +123,8 @@ const FaqCard = ({
             )}
             {!isCollapsed && (
               <div className="description py-2 flex justify-between">
-                {renderHTMLContent(htmlContent)}
+                {data.question && <p className="text-base text-gray-600">{data.question}</p>}
+                {/* {renderHTMLContent(htmlContent)} */}
               </div>
             )}
           </div>
