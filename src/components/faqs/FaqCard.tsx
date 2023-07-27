@@ -123,7 +123,7 @@ const FaqCard = ({
             )}
             {!isCollapsed && (
               <div className="description py-2 flex justify-between">
-                {data.question && <p className="text-base text-gray-600">{data.question}</p>}
+                {data.answer && <p className="text-base text-gray-600">{data.answer}</p>}
                 {/* {renderHTMLContent(htmlContent)} */}
               </div>
             )}

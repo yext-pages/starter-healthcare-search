@@ -28,24 +28,24 @@ const ProfessionalSearch = () => {
         return (
           <div className="flex flex-col items-center w-full min-h-full">
               <div className='flex flex-col w-full my-8'>
-                <div className='w-full flex'>
+                <div className='w-full flex sunny'>
                 <Facets
               customCssClasses={{
-                facetsContainer: "Facet-showMore mr-6 block min-w-max hidden md:block pt-1",
+                facetsContainer: "Facet-showMore mr-6 block min-w-max md:block pt-1",
                 optionsContainer: "mb-2 flex flex-col gap-1",
                 titleLabel: "text-md mb-2 border rounded-xl text-center bg-slate-100 p-2"
               }}>
-              <StandardFacet
+              {/* <StandardFacet
                     collapsible={false} 
-                    fieldId={"languages"}      
-                    label="Languages Spoken"         
+                    fieldId={"insuranceAccepted"}      
+                    label="Insurance"         
               />
               <StandardFacet
                     collapsible={false} 
-                    fieldId={"fins_relatedLocations.name"}    
-                    label="Locations Serving"               
-              />
-              <StandardFacet
+                    fieldId={"languages"}    
+                    label="Languages"               
+              /> */}
+              {/* <StandardFacet
                     collapsible={false} 
                     fieldId={"fins_relatedServices.name"}
                     label="Services Offered"               
@@ -53,7 +53,7 @@ const ProfessionalSearch = () => {
               <StandardFacet
                     collapsible={false} 
                     fieldId={"interests"}               
-              />
+              /> */}
               </Facets>
                   <div className='flex flex-col w-full items-center'>
                     <div className='flex flex-col items-center justify-center w-full'>

@@ -23,6 +23,7 @@ const ProfessionalCard = ({
         description: result.rawData.description,
         headshot: result.rawData.headshot,
         certifications: result.rawData.certifications,
+        insurance: result.rawData.insuranceAccepted,
         // landingPageUrl: result.rawData.landingPageUrl,
         address: result.rawData.address.city,
         addressline1: result.rawData.address.line1
