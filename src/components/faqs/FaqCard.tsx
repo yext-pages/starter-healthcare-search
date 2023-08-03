@@ -26,7 +26,7 @@ const FaqCard = ({
     //pull in the relevant fields from your entity to display on the card
     const data: any = {
         question: result.rawData.question,
-        answer: result.rawData.answer,
+        answer: result.rawData.answerV2,
         description: result.rawData.hc_description,
         // landingPageUrl: result.rawData.landingPageUrl,
         // category: result.rawData.fins_faqCategory,
@@ -36,6 +36,12 @@ const FaqCard = ({
 
 // change to the field name that contains html string
     const htmlFieldName = 'answerV2';
+
+    interface CustomRawDataType {
+      name: string,
+      description: string,
+      [htmlFieldName]: { html: string }
+    }
 
       
       function renderHTMLContent(htmlContent: { __html: string } | undefined) {
@@ -47,6 +53,7 @@ const FaqCard = ({
       }
       const html: string = result.rawData?.[htmlFieldName]?.html;
       const htmlContent = useMemo(() => { return { __html: html }; }, [html]);
+
 
     //analytics configuration for the card
     const queryId = useSearchState((state)=>state.query.queryId) || "";
@@ -123,8 +130,8 @@ const FaqCard = ({
             )}
             {!isCollapsed && (
               <div className="description py-2 flex justify-between">
-                {data.answer && <p className="text-base text-gray-600">{data.answer}</p>}
-                {/* {renderHTMLContent(htmlContent)} */}
+                {/* {data.answer && <p className="text-base text-gray-600">{data.answer}</p>} */}
+                {renderHTMLContent(htmlContent)}
               </div>
             )}
           </div>
